@@ -16,6 +16,10 @@ class ApiClient {
     }
     getAll = (gameQuery?: AxiosRequestConfig) =>
         apiClient.get(this.endpoint, gameQuery).then((res) => res.data);
+
+    get = (id: number | string) => {
+        return apiClient.get(this.endpoint + "/" + id).then((res) => res.data);
+    };
 }
 
 export default ApiClient;
