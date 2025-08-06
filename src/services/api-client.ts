@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { GameQuery } from "../store/GameQueryStore";
-import { Genre } from "../hooks/useGenres";
+import { Genre } from "../entities/Genre";
 import { FetchResponse } from "../hooks/useGames";
 
 const apiClient = axios.create({

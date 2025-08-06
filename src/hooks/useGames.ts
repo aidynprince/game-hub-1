@@ -2,6 +2,7 @@ import { GameQuery } from "../store/GameQueryStore";
 import ApiClient from "../services/api-client";
 import ms from "ms";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { Game } from "../entities/Game";
 
 export interface Platform {
     id: number;
@@ -12,18 +13,6 @@ export interface FetchResponse<T> {
     count: number;
     results: T[];
     next: string | null;
-}
-
-export interface Game {
-    id: number;
-    name: string;
-    background_image: string;
-    parent_platforms: { platform: Platform }[];
-    metacritic: number;
-    rating_top: number;
-    slug: string;
-    description_raw: string;
-    released: string;
 }
 
 const apiClient = new ApiClient("/games");

@@ -1,7 +1,7 @@
 import { Button, SimpleGrid, Text } from "@chakra-ui/react";
 import useGameQueryStore, { GameQuery } from "../store/GameQueryStore";
 import useGames, { Platform } from "../hooks/useGames";
-import { Genre } from "../hooks/useGenres";
+import { Genre } from "../entities/Genre";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
