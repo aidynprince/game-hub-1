@@ -1,7 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
-import { GameQuery } from "../store/GameQueryStore";
-import { Genre } from "../entities/Genre";
-import { FetchResponse } from "../hooks/useGames";
+import axios, { AxiosRequestConfig } from "axios";
 
 const apiClient = axios.create({
     baseURL: "https://api.rawg.io/api",
@@ -19,6 +16,11 @@ class ApiClient {
 
     get = (id: number | string) => {
         return apiClient.get(this.endpoint + "/" + id).then((res) => res.data);
+    };
+    getMovie = (id: number | string) => {
+        return apiClient
+            .get(this.endpoint + "/" + id + "/movies")
+            .then((res) => res.data);
     };
 }
 
