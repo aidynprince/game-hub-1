@@ -24,7 +24,6 @@ const ExpandableText = ({ children }: ExpandableTextProps) => {
             {expanded ? children : summary + "..."} {"  "}
             <Button
                 onClick={() => setExpanded(!expanded)}
-                color="white"
                 colorScheme={expanded ? "red" : "blue"}
                 fontWeight={"bold"}
             >
