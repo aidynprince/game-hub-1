@@ -4,11 +4,11 @@ import ms from "ms";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { Game } from "../entities/Game";
 
-export interface Platform {
-    id: number;
-    name: string;
-    slug: string;
-}
+// export interface Platform {
+//     id: number;
+//     name: string;
+//     slug: string;
+// }
 export interface FetchResponse<T> {
     count: number;
     results: T[];
