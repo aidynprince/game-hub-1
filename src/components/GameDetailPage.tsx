@@ -4,10 +4,12 @@ import { Genre } from "../entities/Genre";
 import { Platform } from "../entities/Platform";
 import useGame from "../hooks/useGame";
 import useMovie from "../hooks/useMovies";
+import useScreenshots from "../hooks/useScreenshots";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
 import ExpandableText from "./ExpandableText";
 import GameAttributes from "./GameAttributes";
+import Screenshots from "./Screenshots";
 import Trailer from "./Trailer";
 
 interface Pub {
@@ -28,9 +30,9 @@ const GameDetailPage = () => {
         error: movieerror,
     } = useMovie(slug);
 
-    console.log(movieObj);
-
     const { data: game, isLoading, error } = slugObj;
+
+    const { data: screenObj, error: screenError } = useScreenshots(slug);
 
     const headings = ["platforms", "Genres", "Metascore", "Publishers"];
 
@@ -59,6 +61,7 @@ const GameDetailPage = () => {
                 Publishers={Publishers}
             />
             <Trailer movies={movieObj.results}></Trailer>
+            <Screenshots screenObj={screenObj?.results}></Screenshots>
         </>
     );
 };

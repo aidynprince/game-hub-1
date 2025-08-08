@@ -13,7 +13,6 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Trailer = ({ movies }: Props) => {
-    console.log(movies);
     if (!movies || movies.length === 0) return null;
     let movie = movies[0];
     return (
@@ -22,11 +21,17 @@ const Trailer = ({ movies }: Props) => {
                 Trailers
             </Heading>
             {
-                <Box key={movie.id} marginBottom={2}>
+                <Box key={movie.id} margin={2}>
                     <Text fontSize="lg">{movie.name}</Text>
 
                     {
-                        <video width="50%" controls poster={movie.preview}>
+                        <video
+                            width="50%"
+                            height={"10%"}
+                            controls
+                            poster={movie.preview}
+                            style={{ borderRadius: "10px" }}
+                        >
                             <source src={movie?.data[480]} />
                             Your browser does not support the video tag.
                         </video>

@@ -22,6 +22,11 @@ class ApiClient {
             .get(this.endpoint + "/" + id + "/movies")
             .then((res) => res.data);
     };
+    getScreenshots = (id: number | string) => {
+        return apiClient
+            .get(this.endpoint + "/" + id + "/screenshots")
+            .then((res) => res.data);
+    };
 }
 
 export default ApiClient;
