@@ -1,12 +1,10 @@
-import { GridItem, Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
-import { Genre } from "../entities/Genre";
-import { Platform } from "../entities/Platform";
+import Genre from "../entities/Genre";
+import Platform from "../entities/Platform";
 import useGame from "../hooks/useGame";
 import useMovie from "../hooks/useMovies";
 import useScreenshots from "../hooks/useScreenshots";
-import CriticScore from "./CriticScore";
-import DefinitionItem from "./DefinitionItem";
 import ExpandableText from "./ExpandableText";
 import GameAttributes from "./GameAttributes";
 import Screenshots from "./Screenshots";

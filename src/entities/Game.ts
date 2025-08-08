@@ -1,6 +1,6 @@
-import { Platform } from "../hooks/useGames";
+import Platform from "./Platform";
 
-export interface Game {
+export default interface Game {
     id: number;
     name: string;
     background_image: string;

@@ -1,5 +1,4 @@
 import { Box, Image, SimpleGrid } from "@chakra-ui/react";
-import React from "react";
 
 const Screenshots = ({ screenObj }: any) => {
     console.log(screenObj);

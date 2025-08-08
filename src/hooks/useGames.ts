@@ -1,14 +1,9 @@
 import { GameQuery } from "../store/GameQueryStore";
 import ApiClient from "../services/api-client";
 import ms from "ms";
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { Game } from "../entities/Game";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import Game from "../entities/Game";
 
-// export interface Platform {
-//     id: number;
-//     name: string;
-//     slug: string;
-// }
 export interface FetchResponse<T> {
     count: number;
     results: T[];

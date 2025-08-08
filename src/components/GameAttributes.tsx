@@ -1,6 +1,4 @@
-import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import React from "react";
-import useGame from "../hooks/useGame";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
 
